@@ -1,0 +1,65 @@
+<script>
+$(document).ready(function() 
+{
+	$(".people").flexigrid(
+	{
+		url: 'contentloader.php?obj=person&task=GetJSONData&id={param}',
+		dataType: 'json',
+		colModel : [
+			{display: 'ID', name : 'ID', width : 135, sortable : true, align: 'left', hide : true},
+			{display: 'First Name', name : 'FirstName', width : 135, sortable : true, align: 'left'},
+			{display: 'Last Name', name : 'LastName', width : 132, sortable : true, align: 'left'},
+			{display: 'Username', name : 'UserName', width : 132, sortable : true, align: 'left'},
+			{display: 'Password', name : 'Password', width : 132, sortable : true, align: 'left'}
+			],
+		buttons : [
+			{name: 'Add', bclass: 'add', onpress : command},
+			{name: 'Edit', bclass: 'edit', onpress : command},
+			{name: 'Delete', bclass: 'delete', onpress : command},
+			{separator: true}
+			],
+		searchitems : [
+			{display: 'First Name', name : 'FirstName'},
+			{display: 'Last Name', name : 'LastName', isdefault: true}
+			],
+		sortname: "FirstName",
+		sortorder: "asc",
+		useRp: true,
+		usepager: true,
+		rp: 10,
+		showTableToggleBtn: true,
+		showToggleBtn: true,
+		width: 'auto',
+		height: 'auto',
+		nomsg: 'No Records Found.',
+		singleSelect: true
+	});
+ });
+
+function command(com,grid)
+{
+	if(com == 'Add')
+		window.location.href='?obj=person&task=load&id=-1';
+	else if(com == 'Delete')
+		alert('Delete');
+	else if (com == 'Edit')
+		alert('Edit');
+}
+
+/*
+function click(cell,id)
+{
+	$(cell).css('cursor','pointer');
+	
+	$(cell).click(function(){
+		var id = $('.trSelected td:first-child div').text();
+		if(id != '')
+		{
+			location.href = window.location + '&id=' + id;
+		}
+	}); 
+}
+*/
+</script>
+
+<table class="people" style="display:none;"></table>

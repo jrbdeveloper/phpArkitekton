@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app>
+	<config>
+		<sitename>phpArkitekton Release</sitename>
+		<tagline>Release Version 1.8.5</tagline>
+		<ownername>John Bales</ownername>
+		<owneremail>johnbales@cox.net</owneremail>
+		<appversion>1.8.5</appversion>
+		<paths>
+			<application>application/</application>
+			<controls>controls/</controls>
+			<data>application/data/</data>
+			<templates>application/templates/</templates>
+			<modules>modules/</modules>
+			<pages>pages/</pages>
+			<public>public/</public>
+			<logs>modules/logviewer/data/</logs>
+		</paths>
+	</config>
+</app>

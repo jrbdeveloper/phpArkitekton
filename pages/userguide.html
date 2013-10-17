@@ -1,0 +1,643 @@
+<h2>Code Sample User Guide</h2>
+<p><b>Current Version: 1.8.0</b></p>
+<p>
+	The introduction of the new framework to the website is meant to isolate the various content sections from the programming 
+	logic used to present the site. This should make it easier to maintain the site. You will no longer need to worry about code 
+	that you don't need to understand, in this case PHP. At a minimum you should only need to understand how to manage content 
+	with HMTL and you should have a basic understanding of XML; no advanced knowledge is needed to manage the website inside of 
+	the framework. In the future the framework will be upgraded to include content management tools that will make it so that you 
+	can manage the site's content without having to use HTML and/or XML.
+</p>
+<p>
+	This document is structured to outline the various section of the sites homepage as well as the various page of the site itself. 
+	This particular website has two templates; one for the home page and one for all subpages. This is important to know when 
+	adding new pages to the website. How to do this is described in a later section of this user guide.
+</p>
+
+<p><b>Table of Contents</b></p>
+<ol type="I">
+	<li>Managing Tour News</li>
+	<li>Managing Tour Course</li>
+	<li>Managing Tour Players</li>
+	<li>Managing Sidebar Panels</li>
+	<li>Managing Pages</li>
+	<li>Managing the Footer</li>
+</ol><br />
+
+<p><b>Recommendation for managing the files for the website</b></p>
+
+<p>
+	I would recommend not using the server file management tools and instead use something like Dreamweaver or some other web 
+	authoring application locally. Also, I would recommend using an FTP application to upload file to the server instead of the 
+	server file management tools.
+</p>
+
+<p>Web Authoring Tool: Dreamweaver</p>
+<p>FTP Client: CoreFTP</p>
+<p>Once the content management system for the framework has been introduced this will no longer be an issue.</p>
+
+<p><b>Managing Tour News</b></p>
+<p>
+	This section describes the process for managing the <b><i>Tour News</i> </b>section of the home page. Located in the "pages" 
+	folder (/www/htdocs/ pages/) you will find an HTML file named <b><i>tournews.html</i></b>. This is the file that contains the 
+	content that is located in the <b><i>Tour News</i></b> section of the home page. To change the content that appears on the 
+	home page in this section just simply edit the content in the HTML file save your changes and then upload and overwrite what 
+	is on the server is the same location.
+</p>
+
+<p>
+	Keep in mind that this should only be the raw HTML for this section of the home page. To not enter the HTML you would expect 
+	to see in a regular HTML page. This HTML is created for you and rendered by the framework. By opening the tournews.html file 
+	you will see what I am talking about. This will also be the case when adding sub pages to the website. This process will be 
+	described in a later section of this user guide.
+</p>
+
+<p><b>Managing Tour Course</b></p>
+<p>
+	This section describes the process for managing the <b><i>Tour Course</i></b> section of the home page. Located in the "data" 
+	folder (/www/htdocs/ content/data/) you will find an XML file named <b><i>courses.xml</i></b>. This is the file that contains 
+	the content that is located in the <b><i>Tour Course</i></b> section of the home page. To edit the content that appears on the 
+	home page for this section, simply edit the information in the xml file within the xml tags. Make sure the structure of the 
+	xml file is not changed in any way. Once complete save your changes and then upload the changes to the server to the 
+	appropriate location (/www/htdocs/ content/data/). The site also supports the ability to have multiple courses appearing on 
+	the home page. This can be accomplished by adding additional xml tag blocks as the example demonstrates.
+</p>
+
+<textarea class="code">
+<? xml version="1.0" encoding="UTF-8" ?>
+<course>
+	<details>
+		<image link="" height="100" width="125" alt="" border="0">/images/image.jpg</image>
+		<title>A Title One</title>
+		<content>Some content would go here...</content>
+		<resource title="Link Title">http://www.link.com</resource>
+	</details>
+
+	<details>
+		<image link="" height="100" width="125" alt="" border="0">/images/image.jpg</image>
+		<title>A Title Two</title>
+		<content>Some content would go here...</content>
+		<resource title="Link Title">http://www.link.com</resource>
+	</details>
+</course>
+</textarea><br /><br />
+
+<table border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=67 valign=top style='width:50.5pt;border:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Details</b></p>
+  </td>
+  <td width=667 colspan=3 valign=top style='width:500.3pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This is
+  the containing tag the groups the course content sections together. As with
+  all tags you should have a closing tag at the end of the section block.
+  Example: &lt;details&gt;...&lt;/details&gt;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=67 rowspan=10 valign=top style='width:50.5pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Image</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This tag
+  represents the image that is located at the top of the content section "Tour
+  Course" on the home page. As with all tags you should have a closing tag.
+  Must begin with the forward slash.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 rowspan=5 valign=top style='width:54.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Link</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>If it is
+  desired that the image itself be clickable then this attribute would be used
+  to specify the URL to take the user to when the image is clicked.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Height</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the height dimension of the image.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Width</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the width dimension of the image.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Alt</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the alt text that gets rendered in place of
+  images if the user turns off image rendering in their browser.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Border</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the border around the image. If the Link
+  attribute is used it is recommended that the border be set to 0 otherwise a
+  link border will be added by default around the image.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Title</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This tag
+  represents the title that is located at the top of the content section "Tour
+  Course" on the home page.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Content</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This tag
+  represents the content that is located in the "Tour Course" section on the
+  home page.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 rowspan=2 valign=top style='width:54.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Resource</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  represents the content that is located in the "Tour Course" section on the
+  home page. It will be laid out as such: For more information about [<i>title</i>]
+  visit [<i>resource</i>]</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>title</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute represent the text that is clickable in the resource section.</p>
+  </td>
+ </tr>
+</table>
+
+<p><b>&nbsp;</b></p>
+
+
+<p><b>Managing Tour Players</b></p>
+
+<p>
+	This section describes the process for managing the <b><i>Tour Players</i></b> section of the home page. Located in the "data" 
+	folder (/www/htdocs/ content/data/) you will find an XML file named <b><i>players.xml</i></b>. This is the file that contains 
+	the content that is located in the <b><i>Tour Players</i></b> section of the home page. To edit the content that appears on the 
+	home page for this section, simply edit the information in the xml file within the xml tags. Make sure the structure of the xml 
+	file is not changed in any way. Once complete save your changes and then upload the changes to the server to the appropriate 
+	location (/www/htdocs/ content/data/). The site also supports the ability to have multiple players appearing on the home page. 
+	This can be accomplished by adding additional xml tag blocks as the example demonstrates.
+</p>
+
+<textarea class="code" style="height:250px;">
+<?xml version="1.0"  encoding="UTF-8"?>
+	<players>
+		<bio>
+			<photo link="" height="100" width="125" alt="" border="0">/images/image.jpg</photo>
+			<name>John Doe</name>
+			<hometown>San Diego</hometown >
+			<college>USD</college>
+			Ect...
+		</bio>
+		
+		<bio>
+			<photo link="" height="100" width="125" alt="" border="0">/images/image.jpg</photo>
+			<name>Jane Doe</title>
+			<hometown>San Diego</hometown>
+			<college>UCLA</college>
+			Ect...
+		</bio>
+	</players>
+</textarea><br /><br />
+
+<table border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=67 valign=top style='width:50.5pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Bio</b></p>
+  </td>
+  <td width=667 colspan=3 valign=top style='width:500.3pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This is
+  the containing tag that groups the player's content sections together. As
+  with all tags you should have a closing tag at the end of the section block.
+  Example: &lt;bio&gt;...&lt;/bio&gt;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=67 rowspan=7 valign=top style='width:50.5pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Photo</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This tag
+  represents the image that is located at the top of the content section "Tour Players"
+  on the home page. As with all tags you should have a closing tag. Must begin
+  with the forward slash.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 rowspan=5 valign=top style='width:54.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Link</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>If it is
+  desired that the image itself be clickable then this attribute would be used
+  to specify the URL to take the user to when the image is clicked.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Height</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This attribute
+  is used to specify the height dimension of the image.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Width</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the width dimension of the image.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Alt</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the alt text that gets rendered in place of
+  images if the user turns off image rendering in their browser.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Border</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the border around the image. If the Link
+  attribute is used it is recommended that the border be set to 0 otherwise a
+  link border will be added by default around the image.</p>
+  </td>
+ </tr>
+ <tr style='height:22.0pt'>
+  <td width=667 colspan=3 valign=top style='width:500.3pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>The rest of
+  the tags in the xml document should be self explanatory.</p>
+  </td>
+ </tr>
+</table>
+
+<p><b>&nbsp;</b></p>
+
+<p><b>Managing Side Panels</b></p>
+<p>
+	This section describes the process for managing the <b><i>Sidebar</i></b> section of the home page. Located in the "data" 
+	folder (/www/htdocs/content/data/) you will find an XML file named <b><i>sidebars.xml</i></b>. This is the file that contains 
+	the content that is located in the <b><i>Sidebar</i></b> section of the home page. To edit the content that appears on the 
+	home page for this section, simply edit the information in the xml file within the xml tags. Make sure the structure of the 
+	xml file is not changed in any way. Once complete save your changes and then upload the changes to the server to the 
+	appropriate location (/www/htdocs/ content/data/). The site also supports the ability to have multiple panels appearing on the 
+	home page. This can be accomplished by adding additional xml tag blocks as the example demonstrates.
+</p>
+
+<textarea class="code" style="height:275px;">
+<? xml version="1.0" encoding="UTF-8" ?>
+<sidebars>
+	<panel>
+		<title> ROEL Projects </title>
+		<image link = "http://www.roel.com/projects.shtml" height = "167" width = "250" alt = "" border = "0" > /images/roelphoto2.jpg </image>
+		<body align = "center" ></body>
+		<resource title=""></resource>
+	</panel>
+
+	<panel>
+		<title>Leaderboard</title>
+		<image link="" height="" width="" alt="" border="">/images/golfclubca.jpg</image>
+		<body align="center">
+		The Golf Club of California\n
+		February 9 - 11, 2010\n
+		</body>
+		<resource title="Round 2 Leaderboard">/docs/ROEL_Leaderboard.pdf</resource>
+	</panel>
+</sidebars>
+</textarea><br /><br />
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=67 valign=top style='width:50.5pt;border:solid black 1.0pt; padding:0in 5.4pt 0in 5.4pt'><p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Panel</b></p></td>
+  <td width=667 colspan=3 valign=top style='width:500.3pt;border:solid black 1.0pt;  border-left:none;padding:0in 5.4pt 0in 5.4pt'><p style='margin-bottom:0in;margin-bottom:.0001pt'>This is the containing tag the groups the course content sections together. As with all tags you should have a closing tag at the end of the section block. Example: &lt;panel&gt;...&lt;/panel&gt;</p></td>
+ </tr>
+ <tr>
+  <td width=67 valign=top style='width:50.5pt;border:solid black 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Title</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This tag
+  represents the title that displays in the top portion of the sidebar panel.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=67 rowspan=9 valign=top style='width:50.5pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Image</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This tag
+  represents the image that is displayed in the content portion of the sidebar
+  panel. Must begin with the forward slash.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 rowspan=5 valign=top style='width:54.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Link</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>If it is
+  desired that the image itself be clickable then this attribute would be used
+  to specify the URL to take the user to when the image is clicked.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Height</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the height dimension of the image.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Width</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the width dimension of the image.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Alt</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the alt text that gets rendered in place of
+  images if the user turns off image rendering in their browser.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Border</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  attribute is used to specify the border around the image. If the Link
+  attribute is used it is recommended that the border be set to 0 otherwise a
+  link border will be added by default around the image.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Body</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This tag
+  represents the content that is displayed in the content section of the
+  sidebar panel.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>Resource</b></p>
+  </td>
+  <td width=594 colspan=2 valign=top style='width:445.65pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This
+  represents the resource link in the content section of the sidebar panel.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=73 valign=top style='width:54.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+  </td>
+  <td width=77 valign=top style='width:57.75pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'><b>title</b></p>
+  </td>
+  <td width=517 valign=top style='width:387.9pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-bottom:0in;margin-bottom:.0001pt'>This attribute represent the text that is clickable in the resource section.</p>
+  </td>
+ </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>
+	Leaving any tag blank will prevent it from being displayed on the home page in the sidebar panel. This is reflected in the 
+	way the first panel is used on the homepage with the current content.
+</p>
+
+<p><b>Managing Pages</b></p>
+
+<p><b>Adding Pages</b></p>
+<p>
+	This section describes the process for adding pages to the website. This is a multistep process that includes modifying an 
+	XML file to add new items to the menu as well as adding new page content to the page folder. I will document this in a 
+	step-by-step process.
+</p>
+<p>
+	<b>Step 1.&nbsp;</b>Open the menu.xml file located in the "navigation" folder (/www/htdocs/content/navigation/)
+</p>
+<p>
+	<b>Step 2.&nbsp;</b>Add an additional tag for the menu item <b><i>link, title, keywords, description, template, page</i></b>. 
+	Note the page tag should represent the .html file that you will be creating in the pages folder of the website 
+	(/www/htdocs/pages).
+</p>
+<p>
+	<b>Step 3.&nbsp;</b>Create a new HTML file and save it to the "pages" folder (/www/htdocs/pages/). This file should only include 
+	the HTML necessary for presenting the content in the format that you would like.
+</p>
+<p>
+	To see this process in action open the menu.xml file and study its structure and the corresponding HTML file to see its 
+	structure. Once the menu.xml file has been modified and the HTML files have been created you no longer have to worry about the 
+	index.php file. From that point it is only a matter of managing the content in the HTML file.
+</p>
+
+<p><b>Editing Pages</b></p>
+<p>
+	This section describes the process for editing pages that exist in the website. It is assumed that you have already modified 
+	the menu.xml file and created the HTML file for the page that exists in the site. That being said, navigate to the pages 
+	folder (/www/htdocs/pages/) and open the file for the page that you want to modify. Make your changes, save the file and then 
+	upload it to the server.
+</p>
+
+<p><b>Managing the Footer</b></p>
+<p>
+	This section describes the process for modifying the footer for the website. Located in the data folder 
+	(/www/htdocs/ content/data/) you will find the footer.xml file. The content is this file is presented on every page however 
+	you only need to modify it in this one location. Once your changes have been made to the page save them and upload the file 
+	to the server.
+</p>

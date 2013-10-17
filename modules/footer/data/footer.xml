@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<footer>
+
+	<content>
+		<address>123 Main St.</address>
+		<phone>123.123.1234</phone>
+		<fax>345.345.3456</fax>
+		<email>email@server.com</email>
+		<copyright>Code Sample (c) 2010 | All Rights Reserved</copyright>
+	</content>
+	
+</footer>

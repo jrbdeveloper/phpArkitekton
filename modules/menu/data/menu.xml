@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	<link> 			- This is what gets displayed in the menu on the page.
+	<title> 		- This is what gets displayed in the browsers title bar and is use by search engines.
+	<keywords> 		- The list of words that is used to rank the page with search engines.
+	<description> 	- The description of the page that gets used by the search engines.
+	<template> 		- The interface to use for presenting the page. Options include "main" and "sub".
+	<page> 			- The HTML file to get the content from for the page.
+ -->
+<topnav>
+	<menu>
+		<link>Home</link>
+		<title>Home</title>
+		<keywords></keywords>
+		<description></description>
+		<template>main</template>
+		<page target="" type="" islast="false">home</page>
+	</menu>
+	<menu>
+		<link>User Guide</link>
+		<title>User Guide</title>
+		<keywords></keywords>
+		<description></description>
+		<template>main</template>
+		<page target="" type="" islast="false">userguide</page>
+		<sublink>
+			<link>People</link>
+			<title>People</title>
+			<keywords></keywords>
+			<description></description>
+			<template>main</template>
+			<page target="" type="file" islast="false">?obj=person&amp;task=load</page>
+		</sublink>
+	</menu>
+	<menu>
+		<link>API</link>
+		<title>API</title>
+		<keywords></keywords>
+		<description></description>
+		<template>sub</template>
+		<page target="_NEW" type="file" islast="false">api/1.8/index.html</page>
+	</menu>
+	<menu>
+		<link>Contact Info</link>
+		<title>Contact Info</title>
+		<keywords></keywords>
+		<description></description>
+		<template>main</template>
+		<page target="" type="" islast="true">contact</page>
+	</menu>
+</topnav>

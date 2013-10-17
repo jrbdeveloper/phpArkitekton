@@ -1,0 +1,26 @@
+<form action="?obj=person&task=save&id={param}" method="post">
+<table>
+	<tr>
+		<td><label>First Name:</label></td>
+		<td><input type="text" name="FirstName" id="FirstName" value="{firstname}" /></td>
+	</tr>
+	<tr>
+		<td><label>Last Name:</label></td>
+		<td><input type="text" name="LastName" id="LastName" value="{lastname}" /></td>
+	</tr>
+	<tr>
+		<td><label>Username:</label></td>
+		<td><input type="text" name="Username" id="Username" value="{username}" /></td>
+	</tr>
+	<tr>
+		<td><label>Password:</label></td>
+		<td><input type="text" name="Password" id="Password" value="{password}" /></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right">
+			<input type="button" name="cancelbutton" value="Cancel" onclick="javascript:history.go(-1);" />
+			<input type="submit" value="Save" />
+		</td>
+	</tr>
+</table>
+</form>

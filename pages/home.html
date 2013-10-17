@@ -1,0 +1,33 @@
+<h2>Introduction to Design</h2>
+<p><b><a href="?obj=person&task=load">Test Navigation to an Object</a></b></p>
+<p>
+	<img src="public/images/book.jpg" class="AlignLeft" alt="Book Image" />
+	This is a sample website that demonstrates the use of a framework I developed to help eliminate the need to rewrite the same code 
+	over and over again. The structure of the framework makes use of XML for many things, such as the menu, news module, configuration 
+	and more. Also, content for each page resides in an HTML file located in the pages directory of the folder structure. 
+	The decision to structure the site this way was influenced by not having a MySQL database available to me on the first project I 
+	developed this framework for.
+</p>
+
+<p>
+	Overall, the way that the code is structures as well as the folders is by collecting all application specific code and data in 
+	the application folder. In there you also have the controls libraries folder, data folder for application specific configuration 
+	data and lastly the templates folder that contains the main templates for the web application. The templates are nothing more than 
+	standard HTML files with place holders that the application classes will parse and replace with actual data.
+</p>
+
+<p>
+	Beyond the application folder and its content there is the modules folder that contains a directory structure for modules that 
+	have been developed for the site. You should notice that the directory structure follows a similar pattern that the application 
+	directory structure does. Moving on, there is the navigation folder that contains everything to do with the menu system. Again, 
+	the directory structure matches the established pattern.
+</p>
+
+<p>
+	Next, you will notice the pages directory. This is where all HTML files that serve as a page belong. Again, the application 
+	classes will take this information and place it in the appropriate place within the application. In studying the code you might 
+	notice that when writing HTML code you have CSS to aid in presentation. Moving on, we have the public folder that contains sub 
+	folders. Inside these folders you will find the style sheets folder, the JavaScript folder, the images folder and a documents 
+	folder. Lastly we have the tmp folder that contains a logs folder where when errors occur in the website a log file is created. 
+	The application is set up to support a page to view all logs written to this file, for example http://www.mysite.com/index.php?template=main&file=errors
+</p>

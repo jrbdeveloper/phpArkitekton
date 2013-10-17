@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sidebars>
+	<panel>
+		<title><![CDATA[Social Links]]></title>
+		<image link="http://www.yahoo.com" height="" width="" alt="Book" border="0">public/images/book.jpg</image>
+		<body align="center"><![CDATA[I am test the panel object out.]]></body>
+		<resource title=""></resource>
+	</panel>
+	
+	<panel>
+		<title><![CDATA[ ]]></title>
+		<image link="" height="" width="" alt="" border="">public/images/</image>
+		<body align="center"><![CDATA[ ]]></body>
+		<resource title=""></resource>
+	</panel>
+</sidebars>

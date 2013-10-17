@@ -1,0 +1,38 @@
+<h1>Contact Us</h1>
+
+<form name="contact" action="application/formmail.php" method="post">
+	<input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
+	<input type="hidden" name="recipients" value="jabe@cox.net" />
+	<input type="hidden" name="subject" value="phpArkitekton Website Email" />
+	<input type="hidden" name="good_url" value="http://www.phparkitekton.com/index.php?template=sub&file=thankyou" />
+	
+	<table width="95%">
+		<tr>
+			<td nowrap><b><label for="fname">First Name:</label></b></td>
+			<td width="100%"><input type="text" name="FirstName" id="fname" style="width:100%"></td>
+		</tr>
+		
+		<tr>
+			<td nowrap><b><label for="lname">Last Name:</label></b></td>
+			<td><input type="text" name="LastName" id="lname" style="width:100%"></td>
+		</tr>
+		
+		<tr>
+			<td nowrap><b><label for="email">E-Mail Address:</label></b></td>
+			<td><input type="text" name="EMailAddress" id="email" style="width:100%"></td>
+		</tr>
+		
+		<tr>
+			<td nowrap><b><label for="subject">Subject:</label></b></td>
+			<td><input type="text" name="Subject" id="subject" style="width:100%"></td>
+		</tr>
+		
+		<tr>
+			<td nowrap valign="top"><b><label for="msg">Message:</label></b></td>
+			<td><textarea name="Message" id="msg" style="width:100%" rows="10"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right"><input type="submit" name="button" id="btn" value="Send"></td>
+		</tr>
+	</table>
+</form>

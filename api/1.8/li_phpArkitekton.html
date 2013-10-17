@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+						<script src="media/lib/classTree.js"></script>
+									<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+									<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "media/images/plus.png";
+				imgMinus.src = "media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+						<h3 class="package-title">phpArkitekton</h3>
+<div class="tree">
+<script language="Javascript">
+if (document.getElementById) {
+			var tree = new WebFXTree('<span class="package">phpArkitekton</span>');
+		tree.setBehavior('classic');
+	
+					var todos = new WebFXTreeItem('To-do List', 'todolist.html');
+			tree.add(todos);
+		
+		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_phpArkitekton.html');
+		tree.add(class_trees);
+
+		var elements = new WebFXTreeItem('Index of elements', 'elementindex_phpArkitekton.html');		
+		tree.add(elements);
+
+		var parent_node;
+
+			
+				    		    			var tree_classe = new WebFXTreeItem('Class(es)', '');
+    			
+    			    			            				var classe = new WebFXTreeItem('Base', 'phpArkitekton/Base.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('Calendar', 'phpArkitekton/Calendar.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('Content', 'phpArkitekton/Content.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('Course', 'phpArkitekton/Course.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('LogViewer', 'phpArkitekton/LogViewer.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('Menu', 'phpArkitekton/Menu.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('News', 'phpArkitekton/News.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('Page', 'phpArkitekton/Page.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('Player', 'phpArkitekton/Player.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('SideBar', 'phpArkitekton/SideBar.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('SiteSearch', 'phpArkitekton/SiteSearch.html');
+        				tree_classe.add(classe);
+        			    			    	
+    			tree.add(tree_classe);
+    				
+					var tree_function = new WebFXTreeItem('Function(s)', '');
+			
+							var fic = new WebFXTreeItem('autoLoader', 'phpArkitekton/_application---application.init.php.html#functionautoLoader');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_dirs', 'phpArkitekton/_application---application.init.php.html#functionget_dirs');
+				tree_function.add(fic);
+					
+			tree.add(tree_function);
+			
+					var tree_file = new WebFXTreeItem('File(s)', '');
+	
+							var file = new WebFXTreeItem('application.init.php', 'phpArkitekton/_application---application.init.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('base.class.php', 'phpArkitekton/_application---base.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('calendar.class.php', 'phpArkitekton/_modules---calendar---calendar.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('content.class.php', 'phpArkitekton/_application---content.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('course.class.php', 'phpArkitekton/_modules---course---course.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('index.php', 'phpArkitekton/_index.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('logviewer.class.php', 'phpArkitekton/_application---logviewer.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('menu.class.php', 'phpArkitekton/_navigation---menu.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('news.class.php', 'phpArkitekton/_modules---news---news.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('page.class.php', 'phpArkitekton/_application---page.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('player.class.php', 'phpArkitekton/_modules---player---player.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sidebar.class.php', 'phpArkitekton/_modules---sidebar---sidebar.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sitesearch.class.php', 'phpArkitekton/_modules---sitesearch---sitesearch.class.php.html');
+				tree_file.add(file);
+				
+			tree.add(tree_file);
+		
+	
+document.write(tree);
+}
+</script>
+</div>
+<p class="notes">
+	Generated by 
+	<a href="http://www.phpdoc.org" target="_blank">phpDocumentor <span class="field">1.4.0</span></a>
+</p>
+</body>
+</html>

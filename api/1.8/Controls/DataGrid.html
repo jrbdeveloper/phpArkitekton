@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class DataGrid</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class DataGrid</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">author:</span> John Bales</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">copyright:</span> All Rights Reserved 2009</li>
+				<li><span class="field">name:</span> Grid</li>
+				<li><span class="field">uses:</span> Control - Base Class</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_application---controls---grid.class.php.html">/application/controls/grid.class.php</a> (line <span class="field"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a10">10</a></span>)
+		</p>
+		
+				
+		<pre><a href="../phpArkitekton/Base.html">Base</a>
+   |
+   --<a href="../Controls/ControlBase.html">ControlBase</a>
+      |
+      --DataGrid</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$colControl" title="details" class="var-name">$colControl</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$colLocked" title="details" class="var-name">$colLocked</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$colsByIndex" title="details" class="var-name">$colsByIndex</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$columns" title="details" class="var-name">$columns</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$colVisable" title="details" class="var-name">$colVisable</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$customCol" title="details" class="var-name">$customCol</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$customCommand" title="details" class="var-name">$customCommand</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$filters" title="details" class="var-name">$filters</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$Properties" title="details" class="var-name">$Properties</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$wasExecuted" title="details" class="var-name">$wasExecuted</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																						
+				<div class="method-definition">
+											<span class="method-result">Void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">String</span>&nbsp;<span class="var-name">$ID</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$tableName</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$dataKeyName</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableEdit</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$endableUpdate</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableDel</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableInsert</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableSel</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableSort</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">Void</span>
+										<a href="#__destruct" title="details" class="method-name">__destruct</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">Void</span>
+										<a href="#AddColumn" title="details" class="method-name">AddColumn</a>
+											([<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$text</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$custom</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$obj</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$locked</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$visable</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$control</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">Void</span>
+										<a href="#AddFilter" title="details" class="method-name">AddFilter</a>
+											([<span class="var-type">String</span>&nbsp;<span class="var-name">$logic</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$operator</span> = <span class="var-default">null</span>], [<span class="var-type">Variant</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#alter" title="details" class="method-name">alter</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$counter</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">Void</span>
+										<a href="#Bind" title="details" class="method-name">Bind</a>
+											([<span class="var-type">String</span>&nbsp;<span class="var-name">$cols</span> = <span class="var-default">null</span>], <span class="var-type">String</span>&nbsp;<span class="var-name">$tableName</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#Controler" title="details" class="method-name">Controler</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$task</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Array</span>&nbsp;<span class="var-name">$postVars</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#Display" title="details" class="method-name">Display</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#GetButtonType" title="details" class="method-name">GetButtonType</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$task</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$btnType</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$imgPath</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#GetColumn" title="details" class="method-name">GetColumn</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#GetColumns" title="details" class="method-name">GetColumns</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#GetCommandButtons" title="details" class="method-name">GetCommandButtons</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$qsTask</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$qsID</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$dbID</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#GetEditFields" title="details" class="method-name">GetEditFields</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$control</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#GetUpdateFields" title="details" class="method-name">GetUpdateFields</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">Void</span>
+										<a href="#SetSelect" title="details" class="method-name">SetSelect</a>
+											([<span class="var-type">String</span>&nbsp;<span class="var-name">$cols</span> = <span class="var-default">null</span>], <span class="var-type">String</span>&nbsp;<span class="var-name">$tableName</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$colControl" id="$colControl"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$colControl</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a19">19</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$colLocked" id="$colLocked"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$colLocked</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a16">16</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$colsByIndex" id="$colsByIndex"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$colsByIndex</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a14">14</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$columns" id="$columns"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$columns</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a13">13</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$colVisable" id="$colVisable"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$colVisable</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a18">18</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$customCol" id="$customCol"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$customCol</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a15">15</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$customCommand" id="$customCommand"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$customCommand</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a17">17</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filters" id="$filters"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$filters</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a20">20</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$Properties" id="$Properties"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$Properties</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a12">12</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Controls/ControlBase.html#var$Properties">ControlBase::$Properties</a></dt>
+						<dd>Object property array</dd>
+					</dl>
+		
+		
+
+</div>
+<a name="var$wasExecuted" id="$wasExecuted"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$wasExecuted</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a21">21</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a61">61</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor</p>
+<p class="description"><p>Class constructor</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">String</span>&nbsp;<span class="var-name">$ID</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$tableName</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$dataKeyName</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableEdit</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$endableUpdate</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableDel</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableInsert</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableSel</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$enableSort</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$ID</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$tableName</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$dataKeyName</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$enableEdit</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$endableUpdate</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$enableDel</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$enableInsert</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$enableSel</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$enableSort</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Controls/ControlBase.html#method__construct">ControlBase::__construct()</a></dt>
+						<dd>Class constructor for setting the baseline properties for all controls</dd>
+					</dl>
+			
+	</div>
+<a name="method__destruct" id="__destruct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Destructor __destruct</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a115">115</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class destructor</p>
+<p class="description"><p>Class destructor</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Void</span>
+		<span class="method-name">
+			__destruct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Controls/ControlBase.html#method__destruct">ControlBase::__destruct()</a></dt>
+						<dd>Class destructor</dd>
+					</dl>
+			
+	</div>
+<a name="methodAddColumn" id="AddColumn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">AddColumn</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a360">360</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method adds the columns to the grid control, generic columns and/or command columns can be added using this method</p>
+<p class="description"><p>This method adds the columns to the grid control, generic columns and/or command columns can be added using this method</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Void</span>
+		<span class="method-name">
+			AddColumn
+		</span>
+					([<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$text</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$custom</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$obj</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$locked</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$visable</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$control</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$text</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$custom</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$obj</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$task</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$locked</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$visable</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$control</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodAddFilter" id="AddFilter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">AddFilter</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a130">130</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method make it possible to add filters to the where clause of the SQL statement</p>
+<p class="description"><p>This method make it possible to add filters to the where clause of the SQL statement</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Void</span>
+		<span class="method-name">
+			AddFilter
+		</span>
+					([<span class="var-type">String</span>&nbsp;<span class="var-name">$logic</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$operator</span> = <span class="var-default">null</span>], [<span class="var-type">Variant</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$logic</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$operator</span>			</li>
+					<li>
+				<span class="var-type">Variant</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodalter" id="alter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">alter</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a643">643</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method sets the alter CSS class for all HTML tables</p>
+<p class="description"><p>This method sets the alter CSS class for all HTML tables</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			alter
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$counter</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$counter</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodBind" id="Bind"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Bind</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a184">184</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method binds the grid to the data source</p>
+<p class="description"><p>This method binds the grid to the data source</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Void</span>
+		<span class="method-name">
+			Bind
+		</span>
+					([<span class="var-type">String</span>&nbsp;<span class="var-name">$cols</span> = <span class="var-default">null</span>], <span class="var-type">String</span>&nbsp;<span class="var-name">$tableName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$tableName</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$cols</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodControler" id="Controler"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Controler</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a486">486</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This is the grids internal controller, its purpose is to route to the appropriate save, cancel or delete functions</p>
+<p class="description"><p>This is the grids internal controller, its purpose is to route to the appropriate save, cancel or delete functions</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			Controler
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$task</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Array</span>&nbsp;<span class="var-name">$postVars</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$task</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$postVars</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodDisplay" id="Display"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Display</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a196">196</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method is used to display the grid in the interface</p>
+<p class="description"><p>This method is used to display the grid in the interface</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			Display
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodGetButtonType" id="GetButtonType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetButtonType</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a442">442</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method constructs the type of command button to be used in the grid</p>
+<p class="description"><p>This method constructs the type of command button to be used in the grid</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			GetButtonType
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$task</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$btnType</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$imgPath</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$task</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$btnType</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$imgPath</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodGetColumn" id="GetColumn"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetColumn</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a617">617</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method gets a column from the collection by name</p>
+<p class="description"><p>This method gets a column from the collection by name</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			GetColumn
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodGetColumns" id="GetColumns"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetColumns</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a631">631</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method gets all the columns from the collection</p>
+<p class="description"><p>This method gets all the columns from the collection</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			GetColumns
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodGetCommandButtons" id="GetCommandButtons"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetCommandButtons</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a400">400</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method prepares the command buttons to be displayed</p>
+<p class="description"><p>This method prepares the command buttons to be displayed</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			GetCommandButtons
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$qsTask</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$qsID</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$dbID</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$qsTask</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$qsID</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$dbID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodGetEditFields" id="GetEditFields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetEditFields</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a337">337</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method presents a text box for editing for the selected row of the grid</p>
+<p class="description"><p>This method presents a text box for editing for the selected row of the grid</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			GetEditFields
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$control</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$control</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodGetUpdateFields" id="GetUpdateFields"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetUpdateFields</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a594">594</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method gets the update text field values for the grid from the $_POST collection</p>
+<p class="description"><p>This method gets the update text field values for the grid from the $_POST collection</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			GetUpdateFields
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodSetSelect" id="SetSelect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">SetSelect</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a146">146</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method generates the select statment and applies the filters</p>
+<p class="description"><p>This method generates the select statment and applies the filters</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Void</span>
+		<span class="method-name">
+			SetSelect
+		</span>
+					([<span class="var-type">String</span>&nbsp;<span class="var-name">$cols</span> = <span class="var-default">null</span>], <span class="var-type">String</span>&nbsp;<span class="var-name">$tableName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$tableName</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$cols</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a41">41</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property getter method</p>
+<p class="description"><p>Object property getter method</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Controls/ControlBase.html#method__get">ControlBase::__get()</a></dt>
+						<dd>Object property getter method</dd>
+					</dl>
+			
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__set</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolsgrid.class.php.html#a30">30</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property setter method</p>
+<p class="description"><p>Object property setter method</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Controls/ControlBase.html#method__set">ControlBase::__set()</a></dt>
+						<dd>Object property setter method</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Controls/ControlBase.html">ControlBase</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../Controls/ControlBase.html#method__construct">ControlBase::__construct()</a></span><br>
+													<span class="method-name"><a href="../Controls/ControlBase.html#method__destruct">ControlBase::__destruct()</a></span><br>
+													<span class="method-name"><a href="../Controls/ControlBase.html#method__get">ControlBase::__get()</a></span><br>
+													<span class="method-name"><a href="../Controls/ControlBase.html#method__set">ControlBase::__set()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../phpArkitekton/Base.html">Base</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#method__construct">Base::__construct()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodEditorInit">Base::EditorInit()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodgetImage">Base::getImage()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodgetResource">Base::getResource()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadConstants">Base::LoadConstants()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadData">Base::LoadData()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadForm">Base::LoadForm()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadInterface">Base::LoadInterface()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadModules">Base::LoadModules()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#method__destruct">Base::__destruct()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#method__get">Base::__get()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#method__set">Base::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 22 Mar 2010 07:40:27 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

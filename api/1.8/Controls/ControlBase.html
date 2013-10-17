@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class ControlBase</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class ControlBase</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">author:</span> John Bales</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">copyright:</span> All Rights Reserved 2009</li>
+				<li><span class="field">name:</span> Control Base Class</li>
+				<li><span class="field">uses:</span> None</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_application---controls---controlbase.class.php.html">/application/controls/controlbase.class.php</a> (line <span class="field"><a href="../__filesource/fsource_Controls__applicationcontrolscontrolbase.class.php.html#a10">10</a></span>)
+		</p>
+		
+				
+		<pre><a href="../phpArkitekton/Base.html">Base</a>
+   |
+   --ControlBase</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../Controls/Button.html">Button</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../Controls/DropDownList.html">DropDownList</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../Controls/DataGrid.html">DataGrid</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../Controls/ItemList.html">ItemList</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../Controls/Label.html">Label</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../Controls/TextBox.html">TextBox</a></td>
+					<td>
+											
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$Properties" title="details" class="var-name">$Properties</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																														
+				<div class="method-definition">
+											<span class="method-result">Void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">Void</span>
+										<a href="#__destruct" title="details" class="method-name">__destruct</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$Properties" id="$Properties"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$Properties</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolscontrolbase.class.php.html#a16">16</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property array</p>
+<p class="description"><p>Object property array</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../phpArkitekton/Base.html#var$Properties">Base::$Properties</a></dt>
+						<dd>Object property array</dd>
+					</dl>
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../Controls/DataGrid.html#var$Properties">DataGrid::$Properties</a>
+							</li>
+				</ul>
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolscontrolbase.class.php.html#a47">47</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor for setting the baseline properties for all controls</p>
+<p class="description"><p>Class constructor for setting the baseline properties for all controls</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Void</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../phpArkitekton/Base.html#method__construct">Base::__construct()</a></dt>
+						<dd>Class constructor</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../Controls/Button.html#method__construct">Button::__construct()</a>
+								: Class Constructor override the parent constructor
+							</li>
+					<li>
+				<a href="../Controls/DropDownList.html#method__construct">DropDownList::__construct()</a>
+								: This is the constructor for the class and it initialized some specific properties for this class
+							</li>
+					<li>
+				<a href="../Controls/DataGrid.html#method__construct">DataGrid::__construct()</a>
+								: Class constructor
+							</li>
+					<li>
+				<a href="../Controls/ItemList.html#method__construct">ItemList::__construct()</a>
+								: This is the class constructor
+							</li>
+					<li>
+				<a href="../Controls/Label.html#method__construct">Label::__construct()</a>
+								: This is the class constructor
+							</li>
+					<li>
+				<a href="../Controls/TextBox.html#method__construct">TextBox::__construct()</a>
+								: This is the constructor for the text box class and it allows the developer to set properties on instantiation
+							</li>
+				</ul>
+	</div>
+<a name="method__destruct" id="__destruct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Destructor __destruct</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolscontrolbase.class.php.html#a73">73</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class destructor</p>
+<p class="description"><p>Class destructor</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Void</span>
+		<span class="method-name">
+			__destruct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../phpArkitekton/Base.html#method__destruct">Base::__destruct()</a></dt>
+						<dd>Class destructor</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../Controls/Button.html#method__destruct">Button::__destruct()</a>
+								: Class destructor
+							</li>
+					<li>
+				<a href="../Controls/DropDownList.html#method__destruct">DropDownList::__destruct()</a>
+								: Class destructor
+							</li>
+					<li>
+				<a href="../Controls/DataGrid.html#method__destruct">DataGrid::__destruct()</a>
+								: Class destructor
+							</li>
+					<li>
+				<a href="../Controls/ItemList.html#method__destruct">ItemList::__destruct()</a>
+								: Class destructor
+							</li>
+					<li>
+				<a href="../Controls/Label.html#method__destruct">Label::__destruct()</a>
+								: Class destructor
+							</li>
+					<li>
+				<a href="../Controls/TextBox.html#method__destruct">TextBox::__destruct()</a>
+								: Class destructor
+							</li>
+				</ul>
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolscontrolbase.class.php.html#a36">36</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property getter method</p>
+<p class="description"><p>Object property getter method</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../phpArkitekton/Base.html#method__get">Base::__get()</a></dt>
+						<dd>Object property getter method</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../Controls/DataGrid.html#method__get">DataGrid::__get()</a>
+								: Object property getter method
+							</li>
+				</ul>
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__set</span> (line <span class="line-number"><a href="../__filesource/fsource_Controls__applicationcontrolscontrolbase.class.php.html#a25">25</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property setter method</p>
+<p class="description"><p>Object property setter method</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../phpArkitekton/Base.html#method__set">Base::__set()</a></dt>
+						<dd>Object property setter method</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../Controls/DataGrid.html#method__set">DataGrid::__set()</a>
+								: Object property setter method
+							</li>
+				</ul>
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../phpArkitekton/Base.html">Base</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#method__construct">Base::__construct()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodEditorInit">Base::EditorInit()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodgetImage">Base::getImage()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodgetResource">Base::getResource()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadConstants">Base::LoadConstants()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadData">Base::LoadData()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadForm">Base::LoadForm()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadInterface">Base::LoadInterface()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#methodLoadModules">Base::LoadModules()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#method__destruct">Base::__destruct()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#method__get">Base::__get()</a></span><br>
+													<span class="method-name"><a href="../phpArkitekton/Base.html#method__set">Base::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 22 Mar 2010 07:40:19 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

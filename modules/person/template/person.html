@@ -1,0 +1,54 @@
+<script>
+$(document).ready(function() 
+{
+	$(".people").flexigrid(
+	{
+		url: 'contentloader.php?obj=person&task=GetJSONData&id={param}',
+		dataType: 'json',
+		colModel : [
+			{display: 'ID', name : 'ID', width : 135, sortable : true, align: 'left', hide : false},
+			{display: 'First Name', name : 'FirstName', width : 135, sortable : true, align: 'left', process: makelink},
+			{display: 'Last Name', name : 'LastName', width : 132, sortable : true, align: 'left'},
+			{display: 'Username', name : 'UserName', width : 132, sortable : true, align: 'left'},
+			{display: 'Password', name : 'Password', width : 132, sortable : true, align: 'left'}
+			],
+		searchitems : [
+			{display: 'First Name', name : 'FirstName'},
+			{display: 'Last Name', name : 'LastName', isdefault: true}
+			],
+		singleSelect: true,
+		sortname: "FirstName",
+		sortorder: "asc",
+		useRp: false,
+		usepager: true,
+		rp: 10,
+		showTableToggleBtn: false,
+		showToggleBtn: false,
+		width: 'auto',
+		height: 'auto',
+		nomsg: 'No Records Found.'
+	});
+ });
+
+function makelink(cell,id)
+{
+	//alert($(cell).html(this.nodeName));
+	alert($(cell).children().text());
+	$(cell).html('<a href="?obj=person&task=load&id='+ $(cell).parent().prev('td').children().html() +'">'+ $(cell).text() +'</a>');
+}
+
+function alertcolumn(cell,id)
+{
+	$(cell).click(function(){
+		alert($(this).parent().siblings().children().html());
+		//var id = $(this).parent().siblings().children().html();
+		var id = $('.trSelected td:first-child div').text();
+		if(id != '')
+		{
+			alert(id);
+		}
+	}); 
+}
+</script>
+
+<table class="people" style="display:none;"></table>
