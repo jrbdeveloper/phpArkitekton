@@ -2,15 +2,17 @@
 <app>
 	<config>
 		<sitename>phpArkitekton Release</sitename>
-		<tagline>Release Version 1.8.5</tagline>
+		<tagline>Release Version 1.8.6</tagline>
 		<ownername>John Bales</ownername>
 		<owneremail>johnbales@cox.net</owneremail>
-		<appversion>1.8.5</appversion>
+		<appversion>1.8.6</appversion>
 		<paths>
 			<application>application/</application>
 			<controls>controls/</controls>
 			<data>application/data/</data>
 			<templates>application/templates/</templates>
+			<navigation>modules/menu/</navigation>
+			<navigationdata>modules/menu/data/</navigationdata>
 			<modules>modules/</modules>
 			<pages>pages/</pages>
 			<public>public/</public>

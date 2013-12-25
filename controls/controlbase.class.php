@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * @copyright 2010 phpArkitekton
  * @version 1.8.1

@@ -1,4 +1,4 @@
-<?
+<?php
 require_once('application/serializer.class.php');
 require_once 'application/stringbuilder.class.php';
 

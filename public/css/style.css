@@ -4,8 +4,8 @@ body
 {
 	margin: 0 auto;
 	padding: 0;
-	font: 76% Verdana, Helvetica, Tahoma, Arial, sans-serif;
-	background: #f4f4f4 url(public/images/background.gif) top center repeat-y;
+	font: 12px Verdana, Helvetica, Tahoma, Arial, sans-serif;
+	background: #f4f4f4 url(../images/background.gif) top center repeat-y;
 	color: #494949;
 }
 
@@ -89,6 +89,7 @@ body
 	padding:0 6px 0 7px;
 	line-height:1.4em;
 	background-color:#ffffff;
+	margin-top:10px;
 }
 #SideContents h3
 {
@@ -116,7 +117,7 @@ body
 /*Styles for the main contets in the page. */
 #MainContent
 {
-	margin: 0 186px 18px 10px;
+	margin: 10px 186px 18px 10px;
 	padding: 0 12px 0 10px;
 	border-right: 1px solid #DDD;
 	line-height: 1.6em;
@@ -195,3 +196,23 @@ body
 	background-color: #eee;
 	padding:5px;
 }
+
+/* navbar */
+.navbar-primary .navbar { background:#000; border-bottom:none; border-top:solid 1px #fff; margin:0px; }
+.navbar-primary .navbar .nav > li > a {color: #fff;}
+.navbar-primary .navbar .nav > li > a:hover {color: #fff; background-color: #363636;}
+.navbar-primary .navbar .nav .active > a,.navbar .nav .active > a:hover {color:#fff;background-color: #363636;}
+.navbar-primary .navbar .nav li > a .caret, .tnav .navbar .nav li > a:hover .caret {border-top-color: #fff;border-bottom-color: #fff;}
+.navbar-primary .navbar .nav > li.dropdown.open.active > a:hover, .navbar-primary .navbar .nav > li.dropdown.open > a {color: #fff;background-color: #363636;border-color: #fff;}
+.navbar-primary .navbar .nav > li.dropdown.open.active > a:hover .caret, .tnav .navbar .nav > li.dropdown.open > a .caret {border-top-color: #fff;padding:0px;margin:0px;}
+.navbar-primary .navbar .navbar-brand {color:#fff;}
+.navbar-primary .navbar .nav.pull-right {margin-left: 10px;margin-right: 0px;}
+.dropdown-menu {text-align:left;}
+
+.navbar-xs .navbar-primary .navbar { min-height:25px; } 
+.navbar-xs .navbar-primary .navbar .navbar-brand{ padding: 5px 5px;font-size: 10px;line-height: 25px; } 
+.navbar-xs .navbar-primary .navbar .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 25px; } 
+
+.navbar-sm .navbar-primary .navbar { min-height:40px; } 
+.navbar-sm .navbar-primary .navbar .navbar-brand{ padding: 12px 12px;font-size: 16px;line-height: 18px; } 
+.navbar-sm .navbar-primary .navbar .navbar-nav > li > a {  padding-top: 12px; padding-bottom: 12px; line-height: 20px; }

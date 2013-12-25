@@ -9,7 +9,7 @@
  -->
 <topnav>
 	<menu>
-		<link>Home</link>
+		<link display="true">Home</link>
 		<title>Home</title>
 		<keywords></keywords>
 		<description></description>
@@ -17,14 +17,14 @@
 		<page target="" type="" islast="false">home</page>
 	</menu>
 	<menu>
-		<link>User Guide</link>
+		<link display="true">User Guide</link>
 		<title>User Guide</title>
 		<keywords></keywords>
 		<description></description>
 		<template>main</template>
 		<page target="" type="" islast="false">userguide</page>
 		<sublink>
-			<link>People</link>
+			<link display="true">People</link>
 			<title>People</title>
 			<keywords></keywords>
 			<description></description>
@@ -33,7 +33,7 @@
 		</sublink>
 	</menu>
 	<menu>
-		<link>API</link>
+		<link display="true">API</link>
 		<title>API</title>
 		<keywords></keywords>
 		<description></description>
@@ -41,7 +41,7 @@
 		<page target="_NEW" type="file" islast="false">api/1.8/index.html</page>
 	</menu>
 	<menu>
-		<link>Contact Info</link>
+		<link display="true">Contact Info</link>
 		<title>Contact Info</title>
 		<keywords></keywords>
 		<description></description>

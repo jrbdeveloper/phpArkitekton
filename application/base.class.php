@@ -60,11 +60,11 @@ class Base
 		if(function_exists("date_default_timezone_set") and function_exists("date_default_timezone_get"))
 			@date_default_timezone_set(@date_default_timezone_get());
 			
-		$this->ParseQuerystring();
+		//$this->ParseQuerystring();
 		$this->ErrorHandler = new ErrorHandler();
 		$this->DevMode = true;
 		$this->LoadConstants();
-		$this->CeateDatabaseConnection();
+		//$this->CeateDatabaseConnection();
 	}
 
 	/**
@@ -75,6 +75,7 @@ class Base
 	 */
 	public function __destruct()
 	{
+		unset($this->ErrorHandler);
 	}
 
 	/**
@@ -155,6 +156,12 @@ class Base
 					if(!defined(strtoupper('templates')))
 						define(strtoupper('templates'),$nested->getElementsByTagName('templates')->item(0)->nodeValue);
 
+					if(!defined(strtoupper('navigation')))
+						define(strtoupper('navigation'),$nested->getElementsByTagName('navigation')->item(0)->nodeValue);
+					
+					if(!defined(strtoupper('navigationdata')))
+						define(strtoupper('navigationdata'),$nested->getElementsByTagName('navigationdata')->item(0)->nodeValue);
+					
 					if(!defined(strtoupper('modules')))
 						define(strtoupper('modules'),$nested->getElementsByTagName('modules')->item(0)->nodeValue);
 												
@@ -329,6 +336,16 @@ class Base
 		$this->Action 		= '?obj='.$this->Object.$this->Task.$this->Subtask.$this->Item;
 		$this->URL 			= '?obj='.$this->Object.$this->Task.$this->Item;
 		$this->GenericPage 	= '?obj='.$this->Object.$this->Task;	
+	}
+
+	/**
+	 * Method to replace underscores with a space
+	 * @param unknown $string
+	 * @return string
+	 */
+	protected function InsertSpace($string)
+	{
+		return ucwords(str_replace('_',' ', $string));
 	}
 }
 ?>

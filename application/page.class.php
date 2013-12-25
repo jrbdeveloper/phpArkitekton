@@ -61,6 +61,7 @@ class Page extends Base
 		unset($this->News);
 		unset($this->Panel);
 		unset($this->MetaTags);
+		unset($this->Email);
 	}
 
 	/**
@@ -77,6 +78,7 @@ class Page extends Base
 		$this->News 		= new News();
 		$this->Panel 		= new Panel();
 		$this->Footer 		= new Footer();
+		$this->Email 		= new Email();
 	}
 	
 	/**

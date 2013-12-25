@@ -29,6 +29,15 @@
 		$directories = array();
 		$directories[] = 'application/';
 		$directories[] = 'controls/';
+		$directories[] = 'modules/calendar';
+		$directories[] = 'modules/footer';
+		$directories[] = 'modules/logviewer';
+		$directories[] = 'modules/menu';
+		$directories[] = 'modules/metatags';
+		$directories[] = 'modules/news';
+		$directories[] = 'modules/panel';
+		$directories[] = 'modules/person';
+		$directories[] = 'modules/email';
 		
 		global $dirs;
 		
@@ -74,12 +83,12 @@
             }
 	    }
 	}
-
+	
 	spl_autoload_register('autoLoader');
 
 	// Turn on error reporting and log all error to a log file
-	error_reporting ( E_ALL );
-	ini_set ( 'display_errors', 'Off' );
+	error_reporting ( E_ERROR | E_WARNING | E_PARSE | E_NOTICE );
+	ini_set ( 'display_errors', 'On' );
 	ini_set ( 'log_errors', 'On' );
 	ini_set ( 'error_log', 'modules/logviewer/data/error.log' );
 
@@ -92,10 +101,22 @@
 	$errorLogs 	= new LogViewer();
 	
 	// If we're trying to view the error logs load them otherwise load the page that was requested
-	if(in_array(strtolower($file),$page->ErrorPages))
+	if(in_array(strtolower($file),$page->ErrorPages)) {
 		print $errorLogs->Load();
-	else
+	} elseif($file == "email") {
+		try {
+			if($page->Email->Send())
+			{
+				header('Location: index.php?template=main&file=home');
+				exit;
+			}
+		}catch(ErrorException $e)
+		{
+			throw new ErrorException($e->getMessage(), $e->getCode(), $e->getSeverity(), $e->getFile(), $e->getLine(), $e->getPrevious());
+		}
+	}else {
 		print $page->Load();
+	}
 	
 	unset($errorLogs);
 	unset($page);

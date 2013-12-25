@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * @author John Bales
  * @copyright All Rights Reserved 2009

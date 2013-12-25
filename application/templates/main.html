@@ -1,22 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		{metatags}
-		<link rel="stylesheet" type="text/css" href="public/css/style.css" media="screen"/>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="public/javascript/jquery.validate.js"></script>
+		<script type="text/javascript" src="public/javascript/additional-methods.js"></script>
+		<script type="text/javascript" src="public/javascript/jquery.form.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css" />
+	
 		<link rel="stylesheet" type="text/css" href="public/css/flexigrid.css" media="screen"/>
-		<script type="text/javascript" src="public/javascript/jquery-1.4.4.min.js"></script>
-		<script type="text/javascript" src="public/javascript/jquery.flexigrid.js"></script>
-		<script type="text/javascript" src="public/javascript/udm-custom.js"></script>
-		<script type="text/javascript" src="public/javascript/udm-control.js"></script>
-		<script type="text/javascript" src="public/javascript/udm-style.js"></script>
+		<link rel="stylesheet" type="text/css" href="public/css/style.css" media="screen"/>
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="public/javascript/html5shiv.js"></script>
+		<![endif]-->
 	</head>
 	<body>
-		<script type="text/javascript" src="public/javascript/udm-dom.js"></script>
-		<script type="text/javascript" src="public/javascript/udm-mod-keyboard.js"></script>
 		
 		<div id="MainWrapper">
 			<div id="Header"><a href="index.html">phpArkitekton {tagline}</a></div>
-			<div id="HeaderMenus">{menu}</div>
+			<div class="navbar-xs">
+		<div class="navbar-primary">
+			<nav class="navbar navbar-static-top" role="navigation">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">{menu}</div>
+			</nav>
+		</div>
+	</div>
 			<div id="SideContents">
 				<h3>Latest News</h3>
 				{news}
@@ -25,5 +40,9 @@
 			<div id="MainContent">{content}</div>
 			<div id="Footer">{footer}</div>
 		</div>
+		
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    	<script src="http://getbootstrap.com/docs-assets/js/holder.js"></script>
+    
 	</body>
 </html>
